@@ -1,0 +1,13 @@
+<div class="container">
+    <div class="row">
+        <div class="col-10 offset-2">
+            <form (ngSubmit)="submitForm(f)" #f="ngForm" class="form-group mt-5">
+                <input class="form-control mb-5" type="text" name="name" ngModel #name="ngModel">
+                <hr>
+                <input class="form-control mb-5" type="file" (change)="choosePhoto($event)" ngModel name="image" #image="ngModel">
+                <hr>
+                <button class="btn-success" type="submit" [disabled]="!f.valid">Submit</button>
+            </form>
+        </div>
+    </div>
+</div>
